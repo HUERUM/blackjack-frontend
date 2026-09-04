@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { io } from 'socket.io-client';
 
 // ★ 실제 배포한 Render 백엔드 주소로 반드시 변경하세요!
-const SERVER_URL = 'http://localhost:4000'; 
+const SERVER_URL = 'https://blackjack-backend-lpff.onrender.com'; 
 const socket = io(SERVER_URL, {
   autoConnect: false 
 });
