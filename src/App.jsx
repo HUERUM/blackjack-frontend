@@ -19,9 +19,7 @@ export default function App() {
     return () => { socket.off('update_room'); socket.off('room_closed'); socket.disconnect(); };
   }, []);
 
-  useEffect(() => {
-    if (logsEndRef.current) logsEndRef.current.scrollIntoView({ behavior: 'smooth' });
-  }, [gameState?.logs]);
+
 
   const joinRoom = () => {
     if (!socket.connected) return alert("서버 접속 대기 중입니다. 잠시 후 시도해주세요.");
